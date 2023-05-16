@@ -7,6 +7,8 @@ import ReviewForm from "./components/ReviewForm";
 import Thanks from "./components/Thanks";
 
 function App() {
+  const formComponents = [<UserForm />, <ReviewForm />, <Thanks />];
+
   return (
     <div className="App">
       <div className="header">
