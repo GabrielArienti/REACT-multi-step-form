@@ -2,6 +2,9 @@ import "./App.css";
 
 // Components
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import UserForm from "./components/UserForm";
+import ReviewForm from "./components/ReviewForm";
+import Thanks from "./components/Thanks";
 
 function App() {
   return (
