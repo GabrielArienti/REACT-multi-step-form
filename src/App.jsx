@@ -17,6 +17,7 @@ function App() {
         <form></form>
 
         {/* Buttons */}
+        <div className="inputs-container"></div>
         <div className="actions">
           <button type="button">
             <span>Voltar</span>
