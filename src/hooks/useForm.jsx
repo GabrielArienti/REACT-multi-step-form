@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 
 export function useForm(steps) {
@@ -6,6 +5,6 @@ export function useForm(steps) {
 
   return {
     currentStep,
-    currentComponen: steps[currentStep],
+    currentComponent: steps[currentStep],
   };
 }

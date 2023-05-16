@@ -12,7 +12,7 @@ import { useForm } from "./hooks/useForm";
 function App() {
   const formComponents = [<UserForm />, <ReviewForm />, <Thanks />];
 
-  const {} = UseForm(formComponents);
+  const { currentStep, currentComponent } = useForm(formComponents);
 
   return (
     <div className="App">
@@ -27,7 +27,7 @@ function App() {
         <form></form>
 
         {/* Buttons */}
-        <div className="inputs-container"></div>
+        <div className="inputs-container">{currentComponent}</div>
         <div className="actions">
           <button type="button">
             <span>Voltar</span>
