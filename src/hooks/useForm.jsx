@@ -1,11 +1,11 @@
 import React from "react";
+import { useState } from "react";
 
-const useForm = () => {
-  return (
-    <div>
-      <h2>Hook</h2>
-    </div>
-  );
-};
+export function useForm(steps) {
+  const [currentStep, setCurrentStep] = useState[0];
 
-export default useForm;
+  return {
+    currentStep,
+    currentComponen: steps[currentStep],
+  };
+}

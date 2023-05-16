@@ -6,8 +6,13 @@ import UserForm from "./components/UserForm";
 import ReviewForm from "./components/ReviewForm";
 import Thanks from "./components/Thanks";
 
+// Hooks
+import { useForm } from "./hooks/useForm";
+
 function App() {
   const formComponents = [<UserForm />, <ReviewForm />, <Thanks />];
+
+  const {} = UseForm(formComponents);
 
   return (
     <div className="App">
