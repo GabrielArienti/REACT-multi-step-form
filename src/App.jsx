@@ -12,7 +12,7 @@ import { useForm } from "./hooks/useForm";
 function App() {
   const formComponents = [<UserForm />, <ReviewForm />, <Thanks />];
 
-  const { currentStep, currentComponent } = useForm(formComponents);
+  const { currentStep, currentComponent, changeStep } = useForm(formComponents);
 
   return (
     <div className="App">
@@ -33,7 +33,6 @@ function App() {
               <span>Voltar</span>
               <GrFormPrevious></GrFormPrevious>
             </button>
-
             {/* button foward */}
             <button type="submit">
               <span>Avançar</span>
