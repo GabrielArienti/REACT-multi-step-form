@@ -24,20 +24,23 @@ function App() {
       {/* Steps */}
       <div className="form-container">
         <p>Etapas</p>
-        <form></form>
+        <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
+          {/* Buttons */}
+          <div className="inputs-container">{currentComponent}</div>
+          <div className="actions">
+            {/* button - back */}
+            <button type="button" onClick={() => changeStep(currentStep - 1)}>
+              <span>Voltar</span>
+              <GrFormPrevious></GrFormPrevious>
+            </button>
 
-        {/* Buttons */}
-        <div className="inputs-container">{currentComponent}</div>
-        <div className="actions">
-          <button type="button">
-            <span>Voltar</span>
-            <GrFormPrevious></GrFormPrevious>
-          </button>
-          <button type="submit">
-            <span>Avançar</span>
-            <GrFormNext></GrFormNext>
-          </button>
-        </div>
+            {/* button foward */}
+            <button type="submit">
+              <span>Avançar</span>
+              <GrFormNext></GrFormNext>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
