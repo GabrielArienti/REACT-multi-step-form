@@ -5,6 +5,7 @@ import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import UserForm from "./components/UserForm";
 import ReviewForm from "./components/ReviewForm";
 import Thanks from "./components/Thanks";
+import { FiSend } from "react-icons/fi";
 
 // Hooks
 import { useForm } from "./hooks/useForm";
@@ -43,7 +44,7 @@ function App() {
             ) : (
               <button type="button">
                 <span>Enviar</span>
-                <GrFormNext></GrFormNext>
+                <FiSend></FiSend>
               </button>
             )}
           </div>

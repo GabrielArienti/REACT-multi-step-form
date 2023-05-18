@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export function useForm(steps) {
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(2);
 
   function changeStep(i, e) {
     if (e) e.preventDefault();
@@ -15,6 +15,6 @@ export function useForm(steps) {
     currentStep,
     currentComponent: steps[currentStep],
     changeStep,
-    isLastStep: currentStep + 1 === steps.length ? true : false,
+    isLastStep: currentStep + 1 === steps.length ? false : true,
   };
 }
