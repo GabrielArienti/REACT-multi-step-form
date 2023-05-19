@@ -51,3 +51,32 @@ textarea {
   border-radius: 3px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+textarea {
+  height: 120px;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.actions button {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  border-radius: 3px;
+  background-color: #dfdfdf;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.actions button:hover {
+  background-color: #cfcfcf;
+  transition: 0.2s;
+}
