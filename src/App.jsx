@@ -13,7 +13,7 @@ import { useForm } from "./hooks/useForm";
 function App() {
   const formComponents = [<UserForm />, <ReviewForm />, <Thanks />];
 
-  const { currentStep, currentComponent, changeStep, isLastStep } =
+  const { currentStep, currentComponent, changeStep, isLastStep, isFirstStep } =
     useForm(formComponents);
 
   return (
@@ -31,10 +31,12 @@ function App() {
           <div className="inputs-container">{currentComponent}</div>
           <div className="actions">
             {/* button - back */}
-            <button type="button" onClick={() => changeStep(currentStep - 1)}>
-              <span>Voltar</span>
-              <GrFormPrevious></GrFormPrevious>
-            </button>
+            {!isFirstStep && (
+              <button type="button" onClick={() => changeStep(currentStep - 1)}>
+                <span>Voltar</span>
+                <GrFormPrevious></GrFormPrevious>
+              </button>
+            )}
             {/* button foward */}
             {isLastStep ? (
               <button type="submit">
