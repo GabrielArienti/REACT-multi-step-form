@@ -6,6 +6,7 @@ import UserForm from "./components/UserForm";
 import ReviewForm from "./components/ReviewForm";
 import Thanks from "./components/Thanks";
 import { FiSend } from "react-icons/fi";
+import Steps from "./components/Steps";
 
 // Hooks
 import { useForm } from "./hooks/useForm";
@@ -25,7 +26,8 @@ function App() {
 
       {/* Steps */}
       <div className="form-container">
-        <p>Etapas</p>
+        {/* Stepper */}
+        <Steps currentStep={currentStep} />
         <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
           {/* Buttons */}
           <div className="inputs-container">{currentComponent}</div>
