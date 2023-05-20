@@ -1,6 +1,6 @@
 # REACT - Multistep Form 
 
-Multistep form using REACT and React Hooks and React Icons. 
+Multistep form using REACT, Hooks and React Icons. 
 
 Features: 
 - Validation & Autenthication
