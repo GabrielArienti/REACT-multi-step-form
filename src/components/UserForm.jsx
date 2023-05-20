@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserForm = () => {
+const UserForm = ({ data, updateFieldHandler }) => {
   return (
     <>
       {/* Name */}
@@ -12,6 +12,8 @@ const UserForm = () => {
           id="name"
           placeholder="Digite o seu nome"
           required
+          value={data.name || ""}
+          onChange={(e) => updateFieldHandler("name", e.target.value)}
         />
       </div>
 
@@ -24,6 +26,8 @@ const UserForm = () => {
           id="email"
           placeholder="Digite o seu melhor email"
           required
+          value={data.email || ""}
+          onChange={(e) => updateFieldHandler("email", e.target.value)}
         />
       </div>
     </>
